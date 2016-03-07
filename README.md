@@ -2,7 +2,7 @@
 
 HTML email pretty much sucks to create, when you're dealing with nested tables and already-inlined CSS. This is my workflow for creating HTML emails, in the least sucky way possible.
 
- ## Workflow components
+## Workflow components
 
 First and foremost, the awesome Email-builder (via gulp-email-builder). This plugin can inline or embed CSS, send test emails via SMTP or sendmail, and trigger Litmus render tests. CSS is compiled from Sass, and the HTML template is created using Jade. Once you get used to the significant whitespace and unclosed tags, it provides opportunity for clean, expressive code that abstracts away the repetitive boilerplate of nested tables.
 
