@@ -1,0 +1,108 @@
+@import 'settings';
+
+/**
+ * Reset styles
+ */
+
+body, table, td, h1, h2, h3, h4, p, a, li, blockquote {
+    Margin-left: 0;
+    Margin-top: 0;
+    Margin-right: 0;
+    Margin-bottom: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+img {
+    border: 0;
+    height: auto;
+    line-height: 100%;
+    outline: none;
+    text-decoration: none;
+    vertical-align: bottom;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    height: 100%;
+    Margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/**
+ * General layout
+ */
+
+// should apply text-size-adjust to all elements with text nodes?
+.wrapper {
+    table-layout: fixed;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    width: 100%;
+}
+
+.webkit {
+    Margin: 0 auto;
+    max-width: $container-width;
+}
+
+/**
+ * Hidden Pre-header/inbox preview text
+ */
+.preheader {
+    display: none;
+    font-family: sans-serif;
+    font-size: 1px;
+    line-height: 1px;
+    max-height: 0px;
+    max-width: 0px;
+    opacity: 0;
+    overflow: hidden;
+    mso-hide: all;
+}
+
+/**
+ * Responsive 12 column layout
+ */
+
+.container-table {
+    Margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    max-width: $container-width;
+}
+
+.container-table > tr > td {
+    font-size: 0;
+    padding-left: $content-padding;
+    padding-right: $content-padding;
+    text-align: center;
+    vertical-align: top;
+}
+
+.column {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+.column > table {
+    text-align: left;
+    width: 100%;
+}
+
+.column td {
+    font-size: $body-font-size;
+}
+
+.column-12 { max-width: $content-width }
+.column-6 { max-width: $content-width / 2 }
+.column-4 { max-width: $content-width / 3 }
+.column-2 { max-width: $content-width / 6 }
+ 

@@ -1,0 +1,20 @@
+@import 'settings';
+
+/**
+ * Button
+ */
+
+.mixin-button td td,
+.mixin-button a {
+    transition: all 100ms ease-in;
+}
+
+.mixin-button td td:hover,
+.mixin-button a:hover {
+    background: $button-background-hover !important;
+    border-color: $button-background-hover !important;
+}
+
+.mixin-button a:hover {
+    border-top-color: $button-shadow-hover !important;
+}

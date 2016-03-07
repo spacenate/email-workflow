@@ -1,0 +1,63 @@
+extends ./layout/layout.jade
+include ./mixins/button.jade
+
+block head
+    link(rel="stylesheet", type="text/css", href="../dist/css/style.css")
+    link(rel="stylesheet", type="text/css", href="../dist/css/style-embed.css", data-embed)
+
+block preheader
+    p Most email clients will display the first 80 - 140 characters or so of text in an email as "preview text". You may want to have as many as 255 characters, if Outlook support is a concern.
+
+block content
+    +containerTable
+    
+        +row
+            +column-12.header
+                a(href="https://www.spacenate.com"): img(src="https://www.spacenate.com/img/header.jpg", alt="Logo or header")
+
+        +row
+            +column-12.text-content.centered
+                h1 Hello world
+                p This is an HTML email. It should display well in many browsers, including Gmail (browser and mobile), Outlook (2007+), Outlook.com, Yahoo.com, AOL.com, Mac/iOS Mail, and Android Mail.
+
+        +row
+            +column-12.image-content
+                img(src="https://www.spacenate.com/img/yogi.jpg", alt="Bear")
+
+        +row
+            +column-6.text-content
+                h2 Aw, yea
+                p The layout included is a 12 column layout, that allows you to mix and match columns with ease. Nested tables may be a necessary evil in the current world of HTML email, but you shouldn't have to suffer for it.
+
+            +column-6.text-content
+                h2 12 Columns
+                p Even in Gmail, which strips out media queries, the column design in this layout stays responsive, automatically stacking as necessary on viewport widths below 600 pixels.
+
+        +row
+            +column-12.text-content
+                +button(href="https://www.spacenate.com") Ooo, button
+
+        +row
+            +column-12.separator
+                img(src="https://www.spacenate.com/img/zigzag.png", alt="Separator")
+
+
+        +row
+            +column-4.text-content.centered
+                p Twelve columns? Isn't that a bit overkill for email?
+
+            +column-4.text-content.centered
+                p Sure, a two column layout could have worked. But what if you want three columns?
+                    
+            +column-4.image-content.centered
+                img(src="https://www.spacenate.com/img/three-column.png", alt="Image alt")
+
+        +row
+            +column-12.text-content
+                p Enjoy,
+                p Nathan
+
+        +row
+            +column-12.footer
+                p This email was sent by some human, some where.
+                p Click really hard right here to unsubscribe.

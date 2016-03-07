@@ -1,0 +1,111 @@
+-
+    // columnContext keeps track of how many columns we use in a row
+    var columnContext = [];
+    function getColumnOffset() {
+        var offset = 0;
+        for (var i = 0; i < columnContext.length; i++) {
+            offset += columnContext[i];
+        }
+        return offset;
+    }
+
+mixin containerTable
+    include ./includes/ie-table-600-start.html
+    table.container-table
+        block
+    include ./includes/ie-table-end.html
+
+mixin row
+    - columnContext = []
+    tr: td(class=(attributes.class ? attributes.class : ''))
+        //- We don't know what size column will be used, so columns provide their own ie-table-start
+        block
+        //- Put ie-table-end here just in case row doesnt fill all 12 columns
+        include ./includes/ie-table-end.html
+
+mixin column-12
+    - var offset = getColumnOffset()
+    
+    if offset > 0
+        //- Do not allow column to overflow
+        - throw new Error('Column width exceeded!')
+    
+    include ./includes/ie-table-100%-start.html
+    div(class='column column-12 ' + (attributes.class ? attributes.class : ''))
+        table
+            tr
+                td
+                    block
+    //- row closes ie-table
+    
+    - columnContext.push(12)
+
+mixin column-6
+    - var offset = getColumnOffset();
+    if offset + 6 > 12
+        //- Do not allow column to overflow
+        - throw new Error('Column width exceeded!')
+    
+    if offset === 0
+        include ./includes/ie-table-100%-td-50%-start.html
+    else
+        //- Continuing existing row, add spacer
+        include ./includes/ie-new-td-50%.html
+    
+    div(class='column column-6 ' + (attributes.class ? attributes.class : ''))
+        table
+            tr
+                td
+                    block
+    
+    - columnContext.push(6)
+
+mixin column-4
+    - var offset = getColumnOffset();
+    if offset + 4 > 12
+        //- Do not allow column to overflow
+        - throw new Error('Column width exceeded!')
+    
+    if offset === 0
+        include ./includes/ie-table-100%-td-33%-start.html
+    else
+        //- Continuing existing row, add spacer
+        include ./includes/ie-new-td-33%.html
+    
+    div(class='column column-4 ' + (attributes.class ? attributes.class : ''))
+        table
+            tr
+                td
+                    block
+    
+    - columnContext.push(4)
+
+mixin column-2
+    - var offset = getColumnOffset();
+    if offset + 2 > 12
+        //- Do not allow column to overflow
+        - throw new Error('Column width exceeded!')
+    
+    if offset === 0
+        include ./includes/ie-table-100%-td-16%-start.html
+    else
+        //- Continuing existing row, add spacer
+        include ./includes/ie-new-td-16%.html
+    
+    div(class='column column-2 ' + (attributes.class ? attributes.class : ''))
+        table
+            tr
+                td
+                    block
+    
+    - columnContext.push(2)
+
+mixin ifMso
+    <!--[if mso]>
+    block
+    <![endif]-->
+
+mixin ifNotMso
+    <!--[if !mso]><!-->
+    block
+    <!--<![endif]-->

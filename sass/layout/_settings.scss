@@ -1,0 +1,19 @@
+/**
+ * General Layout
+ */
+
+$body-font-size: 15px;
+$content-width: 600px;
+$content-padding: 20px;
+$column-padding: 12px;
+
+/**
+ * 12 Column layout
+ */
+
+$container-width: $content-width + ($content-padding * 2);
+$col-2-width: ($content-width - (5 * $column-padding)) / 6;
+$col-4-width: ($content-width - (2 * $column-padding)) / 3;
+$col-6-width: ($content-width - $column-padding) / 2;
+$col-8-width: (4 * $col-2-width) + (3 * $column-padding);
+$col-10-width: (5 * $col-2-width) + (4 * $column-padding);

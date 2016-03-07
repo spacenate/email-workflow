@@ -1,0 +1,18 @@
+/**
+ * Embedded styles will not be inlined by gulp-email-builder, but rather just embedded
+ * in a <style> tag in the HTML document.
+ *
+ * If you are overriding inlined styles, don't forget !important
+ */
+
+@import 'layout/layout-embed';
+@import 'jade-mixins/button-embed';
+@import 'settings';
+
+
+@media only screen and (min-width: $content-width) {
+    .header img {
+        height: $logo-image-height-lg !important;
+        width: $logo-image-width-lg !important;
+    }
+}

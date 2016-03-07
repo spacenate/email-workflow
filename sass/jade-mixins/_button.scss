@@ -1,0 +1,31 @@
+@import 'settings';
+
+/**
+ * Button
+ */
+
+.mixin-button table {
+    Margin: 0px auto;
+}
+
+.mixin-button td td {
+    background-color: $button-background;
+    border: none;
+    border-radius: 5px;
+}
+
+.mixin-button a {
+    background-color: $button-background;
+    border: 1px solid $button-background;
+    border-bottom-width: 4px;
+    border-bottom-color: $button-shadow;
+    border-bottom-style: solid;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-radius: 5px;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: sans-serif;
+    padding: 12px 20px;
+    text-decoration: none;
+}

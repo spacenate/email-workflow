@@ -1,0 +1,9 @@
+mixin button
+    table(width="100%", border="0", cellspacing="0", cellpadding="0").mixin-button
+        tr
+            td
+                table(border="0", cellspacing="0", cellpadding="0")
+                    tr
+                        td(align="center", class=(attributes.class ? attributes.class : ''))
+                            a(href!=attributes.href, target="_blank")
+                                block

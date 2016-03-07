@@ -1,0 +1,16 @@
+{
+    "emailTest": {
+        "email": "test1@email.com, test2@email.com",
+        "subject": "Test email from gulp-email-builder",
+        "transport": {
+            "type": "SMTP",
+            "options": {
+                "service": "gmail",
+                "auth": {
+                    "user": "test@gmail.com",
+                    "pass": "secretsauce"
+                }
+            }
+        }
+    }
+}

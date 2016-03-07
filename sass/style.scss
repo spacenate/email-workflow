@@ -1,0 +1,123 @@
+@import 'layout/layout';
+@import 'jade-mixins/button';
+@import 'settings';
+
+/**
+ * General styles
+ */
+
+body,
+.wrapper {
+    background-color: $window-background-color;
+    color: $body-font-color;
+}
+
+.container-table {
+    background-color: #ffffff;
+}
+
+h1, h2, h3, h4 {
+    color: $body-header-color;
+    font-family: $header-fonts;
+    font-weight: 300;
+    line-height: 100%;
+    Margin-bottom: 15px;
+}
+
+h1 { font-size: 32px }
+h2 { font-size: 24px }
+h3 { font-size: 18px }
+h4 { font-size: 16px }
+
+p {
+    color: $body-font-color;
+    font-family: $body-fonts;
+    font-size: $body-font-size; // set in layout/settings, because layout also makes use of body-font-size
+    hyphens: none;
+    line-height: 1.4;
+}
+
+a {
+    font-size: $body-font-size;
+}
+
+/**
+ * Header
+ */
+
+.header > table {
+    height: $logo-image-height;
+    Margin-top: $logo-padding-top;
+    Margin-bottom: $logo-padding-bottom;
+}
+
+.header img {
+    height: $logo-image-height;
+    width: $logo-image-width;
+}
+
+/**
+ * Main content
+ */
+
+.column.text-content > table {
+    Margin-bottom: 28px;
+    Margin-top: 28px;
+}
+
+.column-6.text-content p {
+    padding-right: 20px;
+}
+
+.column.image-content img {
+    height: auto;
+    width: 100%;
+}
+
+.column-4.image-content > table {
+    Margin-top: 28px;
+}
+
+.column.centered > table {
+    text-align: center;
+}
+
+.column.centered p {
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.column.separator img {
+    height: auto;
+    width: 100%;
+    max-width: 200px;
+}
+
+.column.separator > table {
+    Margin-top: 28px;
+    text-align: center;
+}
+
+/**
+ * Footer
+ */
+
+.footer {
+    background-color: #e8e8e8;
+    Margin-bottom: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.footer p {
+    font-size: 14px;
+    Margin-left: 13px;
+}
+
+// Example of what NOT to do; this will end up discarded by the inliner.
+@media only screen and (min-width: 480px) {
+    body {
+        background-color: green;
+    }
+}
