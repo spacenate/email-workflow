@@ -21,9 +21,10 @@ First and foremost, the awesome Email-builder (via gulp-email-builder). This plu
 
 Included is a 12 column responsive layout, "bulletproof" button, and example styles. The layout has been tested in Gmail (web and Android app), Apple Mail (OS X and iOS), Outlook 2013, Outlook Mac 2011, Outlook.com, AOL.com, and Yahoo.com. It has been render-tested with the Litmus service on Outlook 2007 and 2011 as well.
 
-<p style="text-align:center">
-    <img src="https://www.spacenate.com/img/ew-full.png" style="width:50%" />
-    <img src="https://www.spacenate.com/img/ew-narrow.png" style="width:25%" />
+<p align="center">
+    <img src="https://www.spacenate.com/img/ew-full.png" width="50%" alt="Full width screenshot" />
+    &nbsp;
+    <img src="https://www.spacenate.com/img/ew-narrow.png" width="25%" alt="Narrow screenshot" />
 </p>
 
 ## To use
