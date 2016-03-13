@@ -9,7 +9,6 @@
 body,
 .wrapper {
     background-color: $window-background-color;
-    color: $body-font-color;
 }
 
 .container-table {
@@ -29,16 +28,12 @@ h2 { font-size: 24px }
 h3 { font-size: 18px }
 h4 { font-size: 16px }
 
-p {
+p, a, li {
     color: $body-font-color;
     font-family: $body-fonts;
-    font-size: $body-font-size; // set in layout/settings, because layout also makes use of body-font-size
+    font-size: $body-font-size;
     hyphens: none;
     line-height: 1.4;
-}
-
-a {
-    font-size: $body-font-size;
 }
 
 /**
@@ -47,8 +42,9 @@ a {
 
 .header > table {
     height: $logo-image-height;
-    Margin-top: $logo-padding-top;
-    Margin-bottom: $logo-padding-bottom;
+    Margin-top: 33px;
+    Margin-bottom: 23px;
+    text-align: center;
 }
 
 .header img {
@@ -78,6 +74,11 @@ a {
     Margin-top: 28px;
 }
 
+.column-4.image-content img {
+    height: auto;
+    width: 96px;
+}
+
 .column.centered > table {
     text-align: center;
 }
@@ -90,6 +91,7 @@ a {
 
 .column.separator img {
     height: auto;
+    max-height: 26px;
     width: 100%;
     max-width: 200px;
 }

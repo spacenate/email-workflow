@@ -98,11 +98,10 @@ body {
 }
 
 .column td {
-    font-size: $body-font-size;
+    font-size: 14px;
 }
 
 .column-12 { max-width: $content-width }
 .column-6 { max-width: $content-width / 2 }
 .column-4 { max-width: $content-width / 3 }
 .column-2 { max-width: $content-width / 6 }
- 
