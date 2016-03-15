@@ -6,18 +6,20 @@ HTML email pretty much sucks to create, when you're dealing with nested tables a
 
 First and foremost, the awesome Email-builder (via gulp-email-builder). This plugin can inline or embed CSS, send test emails via SMTP or sendmail, and trigger Litmus render tests. CSS is compiled from Sass, and the HTML template is created using Jade. Once you get used to the significant whitespace and unclosed tags, it provides opportunity for clean, expressive code that abstracts away the repetitive boilerplate of nested tables.
 
-    +containerTable
-        +row
-            +column-12.header
-                a(href="https://www.spacenate.com")
-                    img(src="https://www.spacenate.com/img/header.jpg", alt="Logo or header")
-        +row
-            +column-6.text-content
-                h2 Aw, yea
-                p The layout included is a 12 column layout, that allows you to mix and match columns with ease. Nested tables may be a necessary evil in the current world of HTML email, but you shouldn't have to suffer for it.
-            +column-6.text-content
-                h2 12 Columns
-                p Even in Gmail, which strips out media queries, the column design in this layout stays responsive, automatically stacking as necessary on viewport widths below 600 pixels.
+```jade
++containerTable
+    +row
+        +column-12.header
+            a(href="https://www.spacenate.com")
+                img(src="https://www.spacenate.com/img/header.jpg", alt="Logo or header")
+    +row
+        +column-6.text-content
+            h2 Aw, yea
+            p The layout included is a 12 column layout, that allows you to mix and match columns with ease. Nested tables may be a necessary evil in the current world of HTML email, but you shouldn't have to suffer for it.
+        +column-6.text-content
+            h2 12 Columns
+            p Even in Gmail, which strips out media queries, the column design in this layout stays responsive, automatically stacking as necessary on viewport widths below 600 pixels.
+```
 
 Included is a 12 column responsive layout, "bulletproof" button, and example styles. The layout has been tested in Gmail (web and Android app), Apple Mail (OS X and iOS), Outlook 2013, Outlook Mac 2011, Outlook.com, AOL.com, and Yahoo.com. It has been render-tested with the Litmus service on Outlook 2007 and 2011 as well.
 
